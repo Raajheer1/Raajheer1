@@ -14,7 +14,7 @@ class RaajPatel(Human):
             An Electrical Engineering B.S. Student at Texas A&M University. Currently working as a 
             contract software engineer at Presentation Management Systems. 
         '''
-        self.aliases = ['Xevion', 'Xevioni']
+        self.aliases = ['Raajheer1', 'Raaj Patel']
         self.aliases.extend(map(lambda alias: alias.lower(), (alias for alias in self.aliases)))
         self.skills = {
             'python': [
