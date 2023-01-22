@@ -11,7 +11,7 @@ class RaajPatel(Human):
         self.name = f'Raaj {0} Patel'.format(choices([os.getenv('MIDDLE_NAME'), 'T', '']))
         self.pronouns = ['he' and 'him'],
         self.description = '''
-            An Electrical Engineering B.S. Student at Texas A&M University. Currently working as a 
+            An Electrical Engineering B.S. at Texas A&M University. Currently working as a 
             contract software engineer at Presentation Management Systems. 
         '''
         self.aliases = ['Raajheer1', 'Raaj Patel']
