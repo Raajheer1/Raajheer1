@@ -10,9 +10,9 @@ class RaajPatel(Human):
     def __init__(self, username='raajheer1'):
         self.name = f'Raaj {0} Patel'.format(choices([os.getenv('MIDDLE_NAME'), 'T', '']))
         self.pronouns = ['he' and 'him'],
+        self.education = "Electrical Engineering B.S. @ Texas A&M University"
         self.description = '''
-            An Electrical Engineering B.S. at Texas A&M University. Currently working as a 
-            contract software engineer at Presentation Management Systems. 
+            Currently working as a contract software engineer at Presentation Management Systems. 
         '''
         self.aliases = ['Raajheer1', 'Raaj Patel']
         self.aliases.extend(map(lambda alias: alias.lower(), (alias for alias in self.aliases)))
