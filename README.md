@@ -1,44 +1,65 @@
-```python
-from life.species import Human
-from skills import python, javascript, go, c++, html, css, other
-from datetime import date
-from random import choices
-from os import getenv
+```go
+package main
 
+import "fmt"
 
-class RaajPatel(Human):
-    def __init__(self, username='raajheer1'):
-        self.name = f'Raaj {0} Patel'.format(choices([os.getenv('MIDDLE_NAME'), 'T', '']))
-        self.pronouns = ['he' and 'him'],
-        self.education = "Electrical Engineering B.S. @ Texas A&M University"
-        self.description = '''
-            Currently working as a contract software engineer at Presentation Management Systems. 
-        '''
-        self.aliases = ['Raajheer1', 'Raaj Patel']
-        self.aliases.extend(map(lambda alias: alias.lower(), (alias for alias in self.aliases)))
-        self.skills = {
-            'python': [
-                python.BeautifulSoup, python.scikit-learn, python.TensorFlow
-            ],
-            'javascript': [
-                javascript.NodeJS, javascript.VueJS
-            ],
-            'go': [
-                go.Gin, go.Gorm
-            ],
-            'c++': [],
-            'html&css': [
-                html.Bootstrap4, css.SCSS, css.CSS
-            ],
-            'other': [
-                other.DevOps
-            ]
-        }
-        self.endpoints = {
-            'Discord': {'username': 'Raaj Patel', 'discriminator': 7762},
-            'Email': {'username': 'the', 'domain': 'raajpatel.dev'}
-        }
-        self.hobbies = [
-            'Programming', 'Aviation', 'Semiconductors', 'Cryptography'
-        ]
+type Human struct {
+	Name        string                       `json:"name"`
+	Pronouns    []string                     `json:"pronouns"`
+	Education   string                       `json:"education"`
+	Research    string                       `json:"research"`
+	Description string                       `json:"description"`
+	Aliases     []string                     `json:"aliases"`
+	Skills      map[string][]interface{}     `json:"skills"`
+	Endpoints   map[string]map[string]string `json:"endpoints"`
+	Hobbies     []string                     `json:"hobbies"`
+}
+
+func main() {
+	Me := Human{
+		Name:        fmt.Sprintf("Raaj %s Patel", "T"),
+		Pronouns:    []string{"he", "him"},
+		Education:   "Electrical Engineering B.S. @ Texas A&M University",
+		Research:    "Computer Engineering",
+		Description: "Currently working as a contract software engineer at Presentation Management Systems.",
+		Aliases:     []string{"Raajheer1", "Raaj Patel", "Raaj"},
+		Skills: map[string][]interface{}{
+			"go": {
+				"Gin", "Gorm", "gRPC",
+			},
+            "python": {
+                "BeautifulSoup", "scikit-learn", "TensorFlow",
+            },
+            "javascript": {
+                "NodeJS", "VueJS", "Typescript",
+            },
+            "c++": {},
+            "html&css": {
+                "Bootstrap4", "SCSS", "CSS", "TailwindCSS",
+            },
+			"devops": {
+				"K3s", "Docker", "Github Actions", "Kustomize", "ArgoCD",
+			},
+            "other": {
+                "MySQL", "MongoDB", "RabbitMQ",
+            },
+        },
+		Endpoints: map[string]map[string]string{
+			"Discord": {
+                "username": "Raaj Patel",
+                "discriminator": "7762",
+            },
+            "Email": {
+                "username": "the",
+                "domain": "raajpatel.dev",
+            },
+        },
+		Hobbies: []string{
+			"Programming", "Aviation", "Semiconductors", "Cryptography",
+		},
+	}
+	
+	fmt.Println(Me)
+}
+
 ```
