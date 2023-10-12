@@ -11,6 +11,7 @@ type Human struct {
 	Pronouns    []string                     `json:"pronouns"`
 	Education   string                       `json:"education"`
 	Research    string                       `json:"research"`
+	StudentOrgs string			 `json:"student_organizations"`
 	Description string                       `json:"description"`
 	Aliases     []string                     `json:"aliases"`
 	Skills      map[string][]interface{}     `json:"skills"`
@@ -24,7 +25,8 @@ func main() {
 		Pronouns:    []string{"he", "him"},
 		Education:   "Electrical Engineering B.S. @ Texas A&M University",
 		Research:    "Computer Engineering",
-		Description: "Currently working as a contract software engineer at Presentation Management Systems.",
+		StudentOrgs: "Formula SAE Electric",
+		Description: "Currently working as a contract software engineer. Texas A&M Formula SAE EV Battery Subteam Member '24.",
 		Aliases:     []string{"Raajheer1", "Raaj Patel", "Raaj"},
 		Skills: map[string][]interface{}{
 			"go": {
