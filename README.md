@@ -66,7 +66,7 @@ func main() {
 
 	user, err := json.MarshalIndent(me, "", "  ")
 	if err != nil {
-		fmt.Println("Uh oh! Something went wrong... Maybe 'Raaj Patel' is not of the Human Species!")
+		fmt.Printf("Uh oh! Something went wrong... Maybe '%s' is not of the Human Species!\n", me.Name)
 		return
 	}
 
